@@ -11,7 +11,6 @@ namespace GPAxCalculator5
         private double sum = 0;
         private int n = 0;
         private double max = 0;
-        private string name = "";//string.Empty
         private string alldata = "";
         private double min = 0;
         private string maxname = "";
@@ -21,12 +20,17 @@ namespace GPAxCalculator5
         {
             this.sum += gpa;
             this.n++;
-            this.alldata += name + "" + gpa;
+            this.alldata += name + "" + gpa + "\r\n";
 
             if (this.max < gpa)
             {
                 this.max = gpa;
+                this.maxname = name;
+            }
+            if (this.max > gpa)
+            {
                 this.min = gpa;
+                this.minname = name;
             }
         }
         public double getGPAx()

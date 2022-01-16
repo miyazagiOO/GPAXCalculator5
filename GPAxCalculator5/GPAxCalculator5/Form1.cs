@@ -8,7 +8,6 @@ namespace GPAxCalculator5
         {
             InitializeComponent();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string input = this.textBoxGPA_input.Text;
@@ -17,7 +16,7 @@ namespace GPAxCalculator5
             double dInput = Convert.ToDouble(input);
             oGPACal.addGPA(dInput, name);
 
-            double gpax = oGPACal.getMax();
+            double gpax = oGPACal.getGPAx();
             textBoxGPAx.Text = gpax.ToString();
 
             double max = oGPACal.getMax();
